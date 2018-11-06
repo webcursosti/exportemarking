@@ -36,7 +36,7 @@ global $DB, $CFG;
 // Validate that we have a rubric associated
 $query = 'SELECT e.*, cm.id as coursemoduleid from mdl_course as c
 inner join mdl_emarking as e ON c.id = e.course
-inner join mdl_course_modules as cm on e.id = cm.instance AND cm.module = 36 where c.fullname LIKE "%cálculo%"  AND c.shortname like "%MAT%" AND c.shortname like "%2-2018" AND e.name LIKE "%Prueba 2%" order by c.fullname';
+inner join mdl_course_modules as cm on e.id = cm.instance AND cm.module = 36 where c.fullname LIKE "%Ecuaciones Diferenciales%"  AND c.shortname like "%MAT%" AND c.shortname like "%2-2018" AND e.name LIKE "%Prueba 2%" order by c.fullname';
 
 $emarkings = $DB->get_records_sql($query);
 $return = array();
